@@ -1,0 +1,18 @@
+---
+pool:
+  name: Default
+
+trigger:
+  - main
+  
+  
+steps:
+  - task: Docker@2
+    displayName: 'Build docker image and push to repository'
+    inputs:
+      command: buildAndPush
+      Dockerfile: 'Dockerfile'
+      containerRegistry: 'MyDockerfile'
+      repository: 'rockshyd28/pipelines-practice-repo-2024'
+      tags: '$(Build.BuildId)'  
+
