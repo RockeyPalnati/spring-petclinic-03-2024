@@ -12,7 +12,7 @@ steps:
     inputs:
       command: buildAndPush
       Dockerfile: 'Dockerfile'
-      containerRegistry: 'MyDockerfile'
+      containerRegistry: 'MyDockerHub'
       repository: 'rockshyd28/pipelines-practice-repo-2024'
       tags: '$(Build.BuildId)'  
 
